@@ -31,6 +31,16 @@ void main() {
 
     System.out.println(model2.predict(f1));
 
+    List<Double> accuraciesList = new ArrayList<>();
+    for (int testK = 1; testK <= 15; testK++) {
+        Knn testModel = new Knn(trainData, testK);
+        String[] testPreds = testModel.predict(getParams(testData));
+
+        double acc = Knn.accuracyScore(testPreds, getCategories(testData));
+        accuraciesList.add(acc);
+    }
+
+    ChartDrawer.showChart(accuraciesList);
 }
 
 // train_test_split
