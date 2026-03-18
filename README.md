@@ -1,31 +1,34 @@
-Mini-projekt programistyczny – kNN
+# Mini-projekt programistyczny – kNN
 
-· Zaimplementować od zera klasyfikator kNN, pracujący w dwóch trybach:
+## Wymagania
 
-    o Klasyfikuje podany przez użytkownika wektor testowy, lub zawierający je własny plik tekstowy, na bazie całego pliku iris.txt
+### Główna funkcjonalność
 
-    o Dzieli dane na dwa zbiory – treningowy i testowy – i zwraca celność (% poprawnie zaklasyfikowanych rekordów) klasyfikacji zbioru testowego na bazie zbioru treningowego. Proporcje według własnych preferencji, ale powinny znajdować się w przedziale między 3:2 a 4:1 (trening:test)
+- Zaimplementować od zera klasyfikator kNN, pracujący w dwóch trybach:
+  - **Tryb 1**: Klasyfikuje podany przez użytkownika wektor testowy lub zawarte w pliku tekstowym wektory na bazie całego pliku iris.txt
+  - **Tryb 2**: Dzieli dane na zbiory treningowy i testowy, zwraca celność (% poprawnie zaklasyfikowanych rekordów) klasyfikacji zbioru testowego na bazie zbioru treningowego. Proporcje według własnych preferencji w przedziale 3:2 a 4:1 (trening:test)
 
-· Program ma wczytać dane Iris z pliku tekstowego. Należy wykorzystać cały plik i samodzielnie podzielić dane na testowe i treningowe wewnątrz programu, a NIE tworzyć dwóch nowych plików.
+### Implementacja
 
-· Algorytm liczy odległość euklidesową klasyfikowanego wektora od wszystkich wektorów treningowych i klasyfikuje go jako modę z klas k najbliższych wektorów.
+- Program ma wczytać dane Iris z pliku tekstowego
+- Wykorzystać cały plik i samodzielnie podzielić dane na testowe i treningowe wewnątrz programu (NIE tworzyć nowych plików)
+- Algorytm liczy odległość euklidesową klasyfikowanego wektora od wszystkich wektorów treningowych
+- Klasyfikuje wektor jako modę z klas k najbliższych wektorów
+- Program wypisuje celność modelu (% poprawnie zaklasyfikowanych wektorów testowych)
 
-· Program ma wypisywać celność modelu, czyli % poprawnie zaklasyfikowanych wektorów testowych.
+### Interfejsy
 
-· Wymagany interfejs do ręcznego wpisywania wektorów testowych (na wyjściu: klasyfikacja) i interfejs plikowy (program wczytuje podany plik i zwraca poprawnie zaklasyfikowany odsetek wektorów)
+- Interfejs do ręcznego wpisywania wektorów testowych (wyjście: klasyfikacja)
+- Interfejs plikowy (program wczytuje plik i zwraca % poprawnie zaklasyfikowanych wektorów)
 
+### Ograniczenia
 
-· Nie można używać zewnętrznych bibliotek.
+- ❌ Nie można używać zewnętrznych bibliotek
+- ❌ Podejście obiektowe NIE jest wymagane
+- ✅ Program w języku: Java, Python lub C++
+- ✅ Wymagana dokładna znajomość działania kodu
+- ✅ Projekt będzie sprawdzany na zajęciach
 
-· Podejście obiektowe NIE jest wymagane
+## Dodatkowe funkcjonalności (opcjonalnie)
 
-· Program powinien zostać napisany w języku java, python lub c++
-
-· Wymagana jest dokładna znajomość działania kodu.
-
-· Projekt będzie sprawdzany przeze mnie na zajęciach.
-
-
-· Propozycja dodatkowej funkcjonalności dla chętnych:
-
-o moduł wyrysowujący wykres zależności między celnością, a k.
+- Moduł wyrysowujący wykres zależności między celnością a parametrem k
